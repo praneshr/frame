@@ -1,0 +1,203 @@
+//        The MIT License (MIT)
+//        
+//        Copyright (c) 2015-2020 Pranesh Ravi
+//        
+//        Permission is hereby granted, free of charge, to any person obtaining a copy
+//        of this software and associated documentation files (the "Software"), to deal
+//        in the Software without restriction, including without limitation the rights
+//        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//        copies of the Software, and to permit persons to whom the Software is
+//        furnished to do so, subject to the following conditions:
+//        
+//        The above copyright notice and this permission notice shall be included in
+//        all copies or substantial portions of the Software.
+//        
+//        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//        THE SOFTWARE.
+
+
+//        This file is dependent on "_render-engine.scss".
+
+//        For default class names, visit http://frame.praneshravi.in
+
+//        Frame is a designed and developed by Pranesh Ravi.
+
+
+//importing OpenSans from google fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800);
+
+
+//importing "_render-engine.scss"
+@import "_render-engine.scss";
+
+
+//Following are the normal css with variables as the class name and property values. These are self explanatory :)
+//Most of the class names are properly scoped. For example, the class .big will work only on <button>. So, you have total freedom to reuse those class names. 
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+ul ul, ul ol, ol ol, ol ul {
+    margin-left: 60px;
+    margin-top: $ordered-list-margin-bottom;
+}
+.#{$centered}{
+    margin: 0 auto;
+}
+.#{$container}{
+    max-width: $container-width;
+    margin: 0 auto;
+    height: auto;
+}
+.#{$same-row}{
+    float: left;
+    position: relative;
+}
+.#{$row}{
+    width: 100%;
+    height: auto;
+    clear: both;
+}
+button,button.#{$button-class-name}{
+    padding: $button-padding;
+    font-size: $button-font-size;
+    background: $button-background;
+    border: $button-border;
+    color: $button-font-color;
+    border-radius: $button-border-radius;
+    transition: background $button-on-hover-transition-time linear;
+    outline: none;
+    margin: $button-margin;
+    min-width: 72px;
+}
+button.#{$button-class-name}:hover{
+    background: $button-on-hover-background;
+}
+button.#{$big-button-class-name}{
+    font-size: $big-button-font-size;
+    padding: $big-button-padding;
+    font-weight: 400;
+    border-radius: $big-button-border-radius;
+}
+button.#{$border-button-class-name}{
+    background: none;
+    border: $border-button-border;
+    color: $border-button-font-color;
+}
+button.#{$secondary-button-class-name}{
+    background: $secondary-button-background;
+    color: $secondary-button-font-color;
+    transition: background $secondary-button-on-hover-transition-time linear;
+    &:hover{
+        background: $secondary-button-on-hover-background;
+    }
+}
+button.#{$secondary-bordered-button-class-name}{
+    background: none;
+    border: $secondary-bordered-button-border;
+    color: $secondary-bordered-button-font-color;
+}
+button.#{$square-button-class-name}{
+    border-radius: 0px;
+}
+table.#{$table-class-name}{
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+    tr{
+        border-bottom: $table-border;
+    }
+    th{
+        padding: 15px;
+    }
+    td{
+        padding: 25px;
+    }
+}
+
+a.#{$link-class-name}{
+    color: $primary-color;
+    text-decoration: none;
+    position: relative;
+    padding: 0px 4px;
+    font-weight: 300;
+    &:hover{
+        color: $primary-color;
+        text-decoration: underline;
+    }
+    &.#{$fancy-link-class-name}:before{
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        bottom: -5px;
+        left: 0;
+        background-color: $fancy-link-line-color;
+        visibility: hidden;
+        transition: all $fancy-link-line-transition-time ease-in-out;
+    }
+    &.#{$fancy-link-class-name}:hover{
+        color: $primary-color;
+        text-decoration: none;
+        &:before{
+            visibility: visible;
+            width: 100%;
+        }
+    }
+}
+ul.#{$unordered-list-class-name} li{
+    list-style:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjEwcHgiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAgMTAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxjaXJjbGUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBBQ0MxIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGN4PSI0LjY3MiIgY3k9IjQuOTUzIiByPSIyLjk1MyIvPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjwvc3ZnPg==);
+    list-style-position: inside;
+    margin-bottom: $unordered-list-margin-bottom;
+    &:last-child{
+        margin-bottom: 0px;  
+    }
+}
+ol.#{$ordered-list-class-name} li{
+    list-style-position: inside;
+    margin-bottom: $ordered-list-margin-bottom;
+    list-style-type: decimal;
+    list-style: decimal;
+    &:last-child{
+        margin-bottom: 0px;  
+    }
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
+}
+h1{
+    font-size: $h1-font-size;
+    margin-bottom: $h1-font-size/2;
+}
+h2{
+    font-size: $h2-font-size;
+    margin-bottom: $h2-font-size/2;
+}
+h3{
+    font-size: $h3-font-size;
+    margin-bottom: $h3-font-size/2;
+}
+h4{
+    font-size: $h4-font-size;
+    margin-bottom: $h4-font-size/2;
+}
+h5{
+    font-size: $h5-font-size;
+    margin-bottom: $h5-font-size/2;
+}
+h6{
+    font-size: $h6-font-size;
+    margin-bottom: $h6-font-size/2;
+}

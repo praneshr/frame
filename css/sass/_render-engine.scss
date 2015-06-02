@@ -1,0 +1,185 @@
+//        The MIT License (MIT)
+//        
+//        Copyright (c) 2015-2020 Pranesh Ravi
+//        
+//        Permission is hereby granted, free of charge, to any person obtaining a copy
+//        of this software and associated documentation files (the "Software"), to deal
+//        in the Software without restriction, including without limitation the rights
+//        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//        copies of the Software, and to permit persons to whom the Software is
+//        furnished to do so, subject to the following conditions:
+//        
+//        The above copyright notice and this permission notice shall be included in
+//        all copies or substantial portions of the Software.
+//        
+//        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//        THE SOFTWARE.
+
+
+//        This file is dependent on "_variables.scss".
+
+//        For default class names, visit http://frame.praneshravi.in
+
+//        Frame is a designed and developed by Pranesh Ravi.
+
+
+//importing the variables
+@import "_variables.scss";
+
+//getting the single column width by dividing the $number-of-grids by 100%
+$single-width : 100/$number-of-grids;
+
+//initial variable for all the loops 
+$no: 1;
+
+
+@media only screen{
+    //classes for small screens are populated by this for loop
+    @for $no from 1 to ($number-of-grids + 1){
+        .#{$prefix-small}-#{$no}{
+            width: ($single-width * $no)+0%;
+        }
+}
+
+
+//classes for medium screens are populated by this for loop
+@for $no from 1 to ($number-of-grids + 1){
+    .#{$prefix-medium}-#{$no}{
+        width: ($single-width * $no)+0%;
+    }
+}
+
+
+//classes for large screens are populated by this for loop
+@for $no from 1 to ($number-of-grids + 1){
+    .#{$prefix-large}-#{$no}{
+        width: ($single-width * $no)+0%;
+    }
+}
+}
+
+//classes for offset on all screens are populated by this for loop
+@for $no from 1 to ($number-of-grids){
+    .#{$offset}-#{$no}{
+        margin-left: ($single-width * $no)+0%;
+    }
+}
+
+
+//media query for small screens based on device minimum width
+@media only screen and (min-width: $min-device-width-for-small-screen) and (max-width : ($min-device-width-for-medium-screen - 1)){
+
+
+    //class for align element in center on small screens
+    .#{$centered-in-small}{
+        margin: 0 auto;
+    }
+
+
+    //visibility classes for small screens
+    .#{$visible-on-large-up},.#{$visible-only-on-large},.#{$visible-on-medium-up},.#{$visible-only-on-medium}{
+        display: none !important;
+    }
+    .#{$visible-on-small-up},.#{$visible-only-on-small}{
+        display: inherit !important;
+    }
+
+
+    //classes for small screens are populated by this for loop. By doing this, all the classes for medium and large screens will get disabled on small screens because this is inside small screen's media query.
+    @for $no from 1 to ($number-of-grids + 1){
+        .#{$prefix-small}-#{$no}{
+            width: ($single-width * $no)+0%;
+        }
+}
+
+
+//offset on small screens alone
+@for $no from 1 to ($number-of-grids){
+    .#{$prefix-small-offset}-offset-#{$no}{
+        margin-left: ($single-width * $no)+0% !important;
+    }
+}
+}
+
+
+//media query for medium screens based on device minimum width
+@media only screen and (min-width : $min-device-width-for-medium-screen) and (max-width: ($min-device-width-for-large-screen - 1)){
+
+
+    //class for align element in center on medium screens
+    .#{$centered-in-medium}{
+        margin: 0 auto;
+    }
+
+
+    //visibility classes for medium screens
+    .#{$visible-on-large-up},.#{$visible-only-on-large},.#{$visible-only-on-small}{
+        display: none !important;
+    }
+    .#{$visible-on-medium-up},.#{$visible-only-on-medium},.#{$visible-on-small-up}{
+        display: inherit !important;
+    }
+
+
+    //classes for medium screens are populated by this for loop. By doing this, all the classes for small and large screens will get disabled on medium screens because this is inside medium screen's media query.
+    @for $no from 1 to ($number-of-grids + 1){
+        .#{$prefix-medium}-#{$no}{
+            width: ($single-width * $no)+0%;
+        }
+}
+
+//offset on medium screens alone
+@for $no from 1 to ($number-of-grids){
+    .#{$prefix-medium-offset}-offset-#{$no}{
+        margin-left: ($single-width * $no)+0% !important;
+    }
+}
+}
+
+
+//media query for large screens based on device minimum width
+@media only screen and (min-width:$min-device-width-for-large-screen){
+    
+    
+    //class for align element in center on large screens
+    .#{$centered-in-large}{
+        margin: 0 auto;
+    }
+    
+    
+    //visibility classes for large screens
+    .#{$visible-on-large-up},.#{$visible-only-on-large},.#{$visible-on-medium-up},.#{$visible-on-small-up}{
+        display: inherit !important;
+    }
+    .#{$visible-only-on-medium},.#{$visible-only-on-small}{
+        display: none !important;
+    }
+    
+    
+    //classes for large screens are populated by this for loop. By doing this, all the classes for small and medium screens will get disabled on large screens because this is inside large screen's media query.
+    @for $no from 1 to ($number-of-grids + 1){
+        .#{$prefix-large}-#{$no}{
+            width: ($single-width * $no)+0%;
+        }
+}
+
+
+//offset on large screens alone
+@for $no from 1 to ($number-of-grids){
+    .#{$prefix-large-offset}-offset-#{$no}{
+        margin-left: ($single-width * $no)+0% !important;
+    }
+}
+}
+
+
+//        Use any auto-prefixer on frame.css to solve all the vendor prefix problems
+
+
+
+//        For any queries, drop me a mail at talkto@praneshravi.in
