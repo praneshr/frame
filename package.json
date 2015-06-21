@@ -1,0 +1,35 @@
+{
+  "name": "frame-ui",
+  "version": "1.0.2",
+  "description": "FRAME is a simple, responsive, boilerplate and a future proof UI framework. It incorporates a powerful grid system and various JavaScript utility classes.",
+  "main": "js/frame.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Pranesh456/frame.git"
+  },
+  "keywords": [
+    "FRAME",
+    "Pranesh",
+    "Framework"
+  ],
+  "author": "Pranesh Ravi <talkto@praneshravi.in> (http://praneshravi.in/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pranesh456/frame/issues"
+  },
+  "homepage": "https://github.com/Pranesh456/frame",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "_shasum": "6f25e3f6be773bacb4a3a185213bf1694dad6c93",
+  "_from": "frame-ui@",
+  "dependencies": {
+    "autoprefixer-loader": "^1.1.0",
+    "css-loader": "^0.9.1",
+    "extract-text-webpack-plugin": "^0.3.8",
+    "sass-loader": "^0.4.2",
+    "style-loader": "^0.8.3",
+    "webpack": "^1.9.11"
+  },
+  "devDependencies": {}
+}

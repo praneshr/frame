@@ -1,0 +1,28 @@
+{
+  "name": "FRAME",
+  "version": "1.0.1",
+  "description": "FRAME is a simple, responsive, boilerplate and a future proof UI framework. It incorporates a powerful grid system and various JavaScript utility classes.",
+  "main": "css/frame.css",
+  "moduleType": [
+    "yui"
+  ],
+  "keywords": [
+    "FRAME",
+    "UI",
+    "UI",
+    "Framework",
+    "Pranesh"
+  ],
+  "authors": [
+    "Pranesh Ravi"
+  ],
+  "license": "MIT",
+  "homepage": "http://getframe.in",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

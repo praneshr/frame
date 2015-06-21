@@ -1,0 +1,199 @@
+//        The MIT License (MIT)
+//        
+//        Copyright (c) 2015-2020 Pranesh Ravi
+//        
+//        Permission is hereby granted, free of charge, to any person obtaining a copy
+//        of this software and associated documentation files (the "Software"), to deal
+//        in the Software without restriction, including without limitation the rights
+//        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//        copies of the Software, and to permit persons to whom the Software is
+//        furnished to do so, subject to the following conditions:
+//        
+//        The above copyright notice and this permission notice shall be included in
+//        all copies or substantial portions of the Software.
+//        
+//        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//        THE SOFTWARE.
+
+
+//        This file is independent of the other two files in this folder.
+
+//        For default class names, visit http://frame.praneshravi.in
+
+//        Frame is a designed and developed by Pranesh Ravi.
+
+
+
+//----------Grids and Classes------------------
+
+//total number of grids
+$number-of-grids: 12;
+
+
+//minimum device width for large, medium and small screens
+$min-device-width-for-large-screen: 1280px;
+$min-device-width-for-medium-screen: 768px;
+$min-device-width-for-small-screen: 320px;
+
+
+//max-width of the container
+$container-width: 900px;
+
+
+//class name for container
+$container: frame;
+
+
+//class name for row
+$row: row;
+
+
+//class name for same-row
+$same-row: same-row;
+
+
+//class name for offset
+$offset: offset;
+
+
+//class name for centered
+$centered: centered;
+
+
+//prefix for large, medium, small, large-offset, medium-offset, small-offset, centered, large-centered, medium-centered, small-centered 
+$prefix-large: lr;
+$prefix-medium: md;
+$prefix-small: sm;
+
+
+$prefix-large-offset: lr; 
+$prefix-medium-offset: md; 
+$prefix-small-offset: sm;
+
+
+$centered-in-small: sm-centered;
+$centered-in-medium: md-centered;
+$centered-in-large: lr-centered;
+
+
+//class name for visibility in large-up, medium-up, small-up, large-only, medium-only and small-only screens
+$visible-on-large-up: visible-on-large-up;
+$visible-on-medium-up: visible-on-medium-up;
+$visible-on-small-up: visible-on-small-up;
+$visible-only-on-large: visible-only-on-large;
+$visible-only-on-medium: visible-only-on-medium;
+$visible-only-on-small: visible-only-on-small;
+
+
+
+//#################################################################################################################
+
+//----------Components------------------------
+
+
+//base font size for the whole document
+$base-font-size : 16px;
+
+
+//primary and secondary colors
+$primary-color : #00acc1;
+$secondary-color : #ffee58;
+
+
+//button
+$button-padding: 10px 25px;
+$button-font-size: $base-font-size;
+$button-background: $primary-color;
+$button-border: none;
+$button-font-color: #FFF;
+$button-border-radius: 4px;
+$button-margin: 5px;
+
+
+//primary button
+$button-class-name: primary;
+
+
+//big-button
+$big-button-class-name: big;
+$big-button-font-size: $base-font-size+2;
+$big-button-padding: 15px 25px;
+$big-button-border-radius: 6px;
+
+
+//bordered-button
+$border-button-class-name: primary-bordered;
+$border-button-border: 1px solid $primary-color;
+$border-button-font-color: $primary-color;
+
+
+//on-hover over primary and primary big button 
+$button-on-hover-background: rgba(0,172,193,.85);
+$button-on-hover-transition-time: .1s;
+
+
+//secondary button
+$secondary-button-class-name: secondary;
+$secondary-button-background: $secondary-color;
+$secondary-button-font-color: #000;
+
+
+//secondary bordered-button
+$secondary-bordered-button-class-name: secondary-bordered;
+$secondary-bordered-button-border: 1px solid $secondary-color;
+$secondary-bordered-button-font-color: $secondary-color;
+
+
+//on-hover over seconday and secondary big button
+$secondary-button-on-hover-background: rgba(255,238,88,.5);
+$secondary-button-on-hover-transition-time: .1s;
+
+
+//square button
+$square-button-class-name: square;
+
+
+//some properties for secondary and secondary bordered-button are inherited from button
+
+
+//tables
+$table-class-name: table;
+$table-border: 1px solid $primary-color;
+
+
+//hyperlinks
+$link-class-name: link;
+$fancy-link-class-name:fancy;
+$fancy-link-line-color: $primary-color;
+$fancy-link-line-transition-time: .3s;
+
+
+//unordered lists
+$unordered-list-class-name: ul;
+$unordered-list-margin-bottom: 10px;
+
+
+//ordered lists
+$ordered-list-class-name: ol;
+$ordered-list-margin-bottom: 10px;
+
+
+//headings
+$h1-font-size: 38px;
+$h2-font-size: 32px;
+$h3-font-size: 28px;
+$h4-font-size: 24px;
+$h5-font-size: 18px;
+$h6-font-size: 14px;
+
+
+//        Use any auto-prefixer on frame.css to solve all the vendor prefix problems
+
+
+
+//        For any queries, drop me a mail at talkto@praneshravi.in
